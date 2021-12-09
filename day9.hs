@@ -37,7 +37,7 @@ explore (x, y) rows stack visited =
         filtered_visited = filter (\x -> not (Set.member (hash x) visited)) possible
         to_visit = filter (\(x1, y1) -> ((rows !! y1) !! x1) /= '9') filtered_visited
         new_stack = foldl (\acc x -> x:acc) stack to_visit
-        in explore (head new_queue) rows (tail new_stack) (Set.insert (hash (x, y)) visited)
+        in explore (head new_stack) rows (tail new_stack) (Set.insert (hash (x, y)) visited)
 
 -- Hashing function used for the visited set
 hash :: (Int, Int) -> Int
