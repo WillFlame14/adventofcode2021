@@ -56,4 +56,3 @@ travel2 curr adjacent visited extra path
 -- Determines if a cave is small or not.
 is_small :: String -> Bool
 is_small cave = (cave !! 0) `elem` ['a'..'z']
-        
