@@ -16,7 +16,7 @@ sol input =
 add :: Snailfish -> Snailfish -> Snailfish
 add x y = reduce $ Pair x y
 
--- Reduces a snailfish number completey.
+-- Reduces a snailfish number completely.
 reduce :: Snailfish -> Snailfish
 reduce (Leaf x) = Leaf x
 reduce x =
